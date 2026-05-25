@@ -56,6 +56,10 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        <script>
+          {`if (window.netlifyIdentity) { window.netlifyIdentity.init(); }`}
+        </script>
       </body>
     </html>
   );
