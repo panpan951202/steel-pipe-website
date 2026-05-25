@@ -1,6 +1,11 @@
 backend:
   name: git-gateway
-  branch: main
+  branch: master
+  squash_merges: true
+
+site_url: https://steel-pipe-website-delta.vercel.app
+display_url: https://steel-pipe-website-delta.vercel.app
+logo_url: https://steel-pipe-website-delta.vercel.app/favicon.ico
 
 media_folder: "public/images"
 public_folder: "/images"
@@ -12,6 +17,8 @@ collections:
     folder: "content/products"
     create: true
     slug: "{{slug}}"
+    editor:
+      preview: false
     fields:
       - { label: "Slug", name: "slug", widget: "string", hint: "URL identifier (e.g., seamless-steel-pipe)" }
       - { label: "Product Name", name: "name", widget: "string" }
@@ -22,14 +29,14 @@ collections:
       - { label: "Size Range", name: "sizeRange", widget: "string" }
       - { label: "Wall Thickness", name: "wallThickness", widget: "string" }
       - { label: "Length", name: "length", widget: "string" }
-      - { label: "Specifications", name: "specifications", widget: "list", fields:
+      - { label: "Specifications", name: "specifications", widget: "list", summary: "{{fields.label}}", fields:
           - { label: "Parameter", name: "label", widget: "string" }
           - { label: "Value", name: "value", widget: "string" }
         }
       - { label: "Applications", name: "applications", widget: "list", field: { label: "Application", name: "item", widget: "string" } }
       - { label: "Standards", name: "standards", widget: "list", field: { label: "Standard", name: "item", widget: "string" } }
       - { label: "Features", name: "features", widget: "list", field: { label: "Feature", name: "item", widget: "string" } }
-      - { label: "FAQ", name: "faq", widget: "list", required: false, fields:
+      - { label: "FAQ", name: "faq", widget: "list", required: false, summary: "{{fields.question}}", fields:
           - { label: "Question", name: "question", widget: "string" }
           - { label: "Answer", name: "answer", widget: "text" }
         }
@@ -43,29 +50,16 @@ collections:
     folder: "content/news"
     create: true
     slug: "{{slug}}"
+    editor:
+      preview: false
     fields:
-      - { label: "Slug", name: "slug", widget: "string", hint: "URL-friendly identifier" }
+      - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "date" }
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Category", name: "category", widget: "select", options: ["Industry News", "Technical Guide", "Technology"] }
-      - { label: "Excerpt", name: "excerpt", widget: "text", hint: "Short summary shown in card previews" }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
       - { label: "Tags", name: "tags", widget: "list", field: { label: "Tag", name: "item", widget: "string" } }
       - { label: "SEO Title", name: "metaTitle", widget: "string" }
       - { label: "SEO Description", name: "metaDescription", widget: "text" }
       - { label: "Content", name: "body", widget: "markdown" }
-
-  - name: "company"
-    label: "Company Info"
-    files:
-      - label: "Company Information"
-        name: "company"
-        file: "content/company.md"
-        fields:
-          - { label: "Company Name", name: "name", widget: "string" }
-          - { label: "Short Name", name: "shortName", widget: "string" }
-          - { label: "Founded Year", name: "founded", widget: "number" }
-          - { label: "Employee Count", name: "employees", widget: "number" }
-          - { label: "Annual Output", name: "annualOutput", widget: "string" }
-          - { label: "Export Countries", name: "exportCountries", widget: "number" }
-          - { label: "Description", name: "body", widget: "markdown" }
