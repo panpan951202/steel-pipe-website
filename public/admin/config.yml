@@ -3,8 +3,8 @@ backend:
   branch: master
   squash_merges: true
 
-site_url: https://steel-pipe-website-delta.vercel.app
-display_url: https://steel-pipe-website-delta.vercel.app
+site_url: https://radiant-phoenix-d4e6a6.netlify.app
+display_url: https://radiant-phoenix-d4e6a6.netlify.app
 logo_url: https://steel-pipe-website-delta.vercel.app/favicon.ico
 
 media_folder: "public/images"
