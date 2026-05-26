@@ -183,7 +183,7 @@ export default function AdminPage() {
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col">
             <div className="p-6 border-b flex items-center justify-between">
-              <h2 className="text-xl font-bold">Edit: {editing.data.name || editing.data.title || editing.slug}</h2>
+              <h2 className="text-xl font-bold">Edit: {String(editing.data.name || editing.data.title || editing.slug)}</h2>
               <button onClick={() => setEditing(null)} className="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
             </div>
             <div className="p-6 space-y-4 overflow-y-auto flex-1">
