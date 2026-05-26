@@ -1,10 +1,11 @@
 ---
+slug: erw-steel-pipe
 name: ERW Steel Pipe
 shortName: ERW
 tagline: >-
   Cost-effective electric resistance welded pipes for structural and line pipe
   use
-image: /images/products/erw-pipe.jpg
+image: /images/products/erw-pipe.png
 category: Welded
 sizeRange: 1/2" - 24" (21.3mm - 609.6mm)
 wallThickness: 0.5mm - 20mm
@@ -66,6 +67,7 @@ metaDescription: >-
   from 1/2" to 24" OD. Cost-effective solution for water pipelines, structural,
   scaffolding, and general engineering applications.
 ---
+
 Electric Resistance Welded (ERW) steel pipes are manufactured by cold-forming flat steel strips into a cylindrical shape and then welding the longitudinal seam using high-frequency electric resistance welding. This efficient production process results in pipes with excellent dimensional accuracy and a smooth surface finish.
 
 Our ERW steel pipes are widely used in low to medium pressure fluid transportation, structural applications, fencing, scaffolding, and general engineering purposes. We produce ERW pipes in both round and shaped profiles, with various surface treatments available to meet the most demanding project requirements.

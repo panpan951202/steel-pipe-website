@@ -4,7 +4,7 @@ import Button from "@/components/ui/Button";
 export default function HeroSection() {
   return (
     <section className="relative bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900 text-white py-24 sm:py-32 lg:py-40">
-      <div className="absolute inset-0 bg-[url('/images/hero-bg.jpg')] bg-cover bg-center opacity-20" />
+      <div className="absolute inset-0 bg-[url('/images/hero-banner.jpg')] bg-cover bg-center opacity-30" />
       <Container className="relative">
         <div className="max-w-3xl">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
