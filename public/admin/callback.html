@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Logging in...</title></head>
+<body>
+  <p>Logging in, please wait...</p>
+  <script>
+    var hash = window.location.hash;
+    if (hash) {
+      window.location.href = "/admin/" + hash;
+    }
+  </script>
+</body>
+</html>

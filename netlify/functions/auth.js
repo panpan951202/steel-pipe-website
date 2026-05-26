@@ -2,15 +2,14 @@ exports.handler = async (event) => {
   const { code } = event.queryStringParameters || {};
 
   if (!code) {
-    const redirectTo = event.queryStringParameters?.redirect_uri || "/admin/";
-    const githubAuth =
-      "https://github.com/login/oauth/authorize" +
-      `?client_id=${process.env.OAUTH_CLIENT_ID}` +
-      `&redirect_uri=${encodeURIComponent("https://radiant-phoenix-d4e6a6.netlify.app/api/auth")}` +
-      `&scope=repo,user`;
     return {
       statusCode: 302,
-      headers: { Location: githubAuth },
+      headers: {
+        Location: "https://github.com/login/oauth/authorize" +
+          "?client_id=" + process.env.OAUTH_CLIENT_ID +
+          "&redirect_uri=" + encodeURIComponent("https://radiant-phoenix-d4e6a6.netlify.app/admin/callback.html") +
+          "&scope=repo,user",
+      },
     };
   }
 
@@ -42,7 +41,7 @@ exports.handler = async (event) => {
     return {
       statusCode: 302,
       headers: {
-        Location: `/admin/#access_token=${data.access_token}&token_type=bearer&provider=github`,
+        Location: "/admin/callback.html#access_token=" + data.access_token + "&provider=github",
       },
     };
   } catch (err) {
