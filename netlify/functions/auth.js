@@ -8,8 +8,7 @@ exports.handler = async (event) => {
         Location:
           "https://github.com/login/oauth/authorize" +
           "?client_id=" + process.env.OAUTH_CLIENT_ID +
-          "&scope=repo,user" +
-          "&redirect_uri=" + encodeURIComponent("https://radiant-phoenix-d4e6a6.netlify.app/api/auth"),
+          "&scope=repo,user",
       },
     };
   }
@@ -36,11 +35,11 @@ exports.handler = async (event) => {
       return {
         statusCode: 200,
         headers: { "Content-Type": "text/html" },
-        body: '<html><body><script>window.opener.postMessage({error:"' + data.error + '"}, window.location.origin);window.close();</script></body></html>',
+        body: '<html><body><p>Auth error: ' + (data.error_description || data.error) + '</p></body></html>',
       };
     }
 
-    const msg = JSON.stringify({ token: data.access_token, provider: "github" });
+    const token = data.access_token;
     return {
       statusCode: 200,
       headers: { "Content-Type": "text/html" },
@@ -48,20 +47,14 @@ exports.handler = async (event) => {
 <html><head><meta charset="utf-8"></head>
 <body style="text-align:center;padding:60px;font-family:sans-serif;">
   <h2>Login successful</h2>
-  <p>Sending token to main window...</p>
+  <p>Redirecting to admin...</p>
   <script>
-    var msg = ${msg};
-    var origin = window.location.origin;
-    var attempts = 0;
-    function send() {
-      if (window.opener) {
-        window.opener.postMessage(msg, origin);
-        attempts++;
-        if (attempts < 5) { setTimeout(send, 500); }
-        else { setTimeout(function(){window.close();}, 1500); }
+    try {
+      if (window.opener && window.opener.location) {
+        window.opener.location.hash = "access_token=${token}&provider=github";
       }
-    }
-    setTimeout(send, 1000);
+    } catch(e) {}
+    window.location.href = "/admin/#access_token=${token}&provider=github";
   </script>
 </body></html>`,
     };
@@ -69,7 +62,7 @@ exports.handler = async (event) => {
     return {
       statusCode: 200,
       headers: { "Content-Type": "text/html" },
-      body: '<html><body><script>window.opener.postMessage({error:"' + err.message + '"}, window.location.origin);window.close();</script></body></html>',
+      body: '<html><body><p>Error: ' + err.message + '</p></body></html>',
     };
   }
 };
