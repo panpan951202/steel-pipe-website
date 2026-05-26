@@ -1,5 +1,5 @@
 exports.handler = async (event) => {
-  const { code, provider } = event.queryStringParameters || {};
+  const { code } = event.queryStringParameters || {};
 
   if (!code) {
     return {
@@ -8,7 +8,8 @@ exports.handler = async (event) => {
         Location:
           "https://github.com/login/oauth/authorize" +
           "?client_id=" + process.env.OAUTH_CLIENT_ID +
-          "&scope=repo,user",
+          "&scope=repo,user" +
+          "&redirect_uri=" + encodeURIComponent("https://radiant-phoenix-d4e6a6.netlify.app/api/auth"),
       },
     };
   }
@@ -35,29 +36,40 @@ exports.handler = async (event) => {
       return {
         statusCode: 200,
         headers: { "Content-Type": "text/html" },
-        body: '<html><body><script>window.opener.postMessage({error:"' + (data.error_description || data.error) + '"},window.location.origin);</script><p>Auth failed. Close this window.</p></body></html>',
+        body: '<html><body><script>window.opener.postMessage({error:"' + data.error + '"}, window.location.origin);window.close();</script></body></html>',
       };
     }
 
+    const msg = JSON.stringify({ token: data.access_token, provider: "github" });
     return {
       statusCode: 200,
       headers: { "Content-Type": "text/html" },
-      body:
-        '<!DOCTYPE html><html><head><script>' +
-        'window.opener.postMessage(' + JSON.stringify({
-          token: data.access_token,
-          provider: "github",
-        }) + ', window.location.origin);' +
-        '</script></head><body style="text-align:center;padding-top:60px;font-family:sans-serif;">' +
-        '<h2>Login successful</h2><p>This window will close automatically.</p>' +
-        '<script>setTimeout(function(){window.close();},2000);</script>' +
-        '</body></html>',
+      body: `<!DOCTYPE html>
+<html><head><meta charset="utf-8"></head>
+<body style="text-align:center;padding:60px;font-family:sans-serif;">
+  <h2>Login successful</h2>
+  <p>Sending token to main window...</p>
+  <script>
+    var msg = ${msg};
+    var origin = window.location.origin;
+    var attempts = 0;
+    function send() {
+      if (window.opener) {
+        window.opener.postMessage(msg, origin);
+        attempts++;
+        if (attempts < 5) { setTimeout(send, 500); }
+        else { setTimeout(function(){window.close();}, 1500); }
+      }
+    }
+    setTimeout(send, 1000);
+  </script>
+</body></html>`,
     };
   } catch (err) {
     return {
       statusCode: 200,
       headers: { "Content-Type": "text/html" },
-      body: '<html><body><script>window.opener.postMessage({error:"' + err.message + '"},window.location.origin);</script><p>Error. Close this window.</p></body></html>',
+      body: '<html><body><script>window.opener.postMessage({error:"' + err.message + '"}, window.location.origin);window.close();</script></body></html>',
     };
   }
 };
