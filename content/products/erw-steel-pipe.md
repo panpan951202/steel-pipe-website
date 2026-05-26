@@ -3,7 +3,7 @@ slug: erw-steel-pipe
 name: ERW Steel Pipe
 shortName: ERW
 tagline: Cost-effective electric resistance welded pipes for structural and line pipe use
-image: /images/products/erw-steel-pipe.jpg
+image: /images/products/erw-pipe.jpg
 category: Welded
 sizeRange: 1/2" - 24" (21.3mm - 609.6mm)
 wallThickness: 0.5mm - 20mm
