@@ -7,7 +7,7 @@ exports.handler = async (event) => {
       headers: {
         Location: "https://github.com/login/oauth/authorize" +
           "?client_id=" + process.env.OAUTH_CLIENT_ID +
-          "&redirect_uri=" + encodeURIComponent("https://radiant-phoenix-d4e6a6.netlify.app/admin/callback.html") +
+          "&redirect_uri=" + encodeURIComponent("https://radiant-phoenix-d4e6a6.netlify.app/api/auth") +
           "&scope=repo,user",
       },
     };
