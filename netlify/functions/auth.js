@@ -1,12 +1,16 @@
-const crypto = require("crypto");
-
 exports.handler = async (event) => {
   const { code } = event.queryStringParameters || {};
 
   if (!code) {
+    const redirectTo = event.queryStringParameters?.redirect_uri || "/admin/";
+    const githubAuth =
+      "https://github.com/login/oauth/authorize" +
+      `?client_id=${process.env.OAUTH_CLIENT_ID}` +
+      `&redirect_uri=${encodeURIComponent("https://radiant-phoenix-d4e6a6.netlify.app/api/auth")}` +
+      `&scope=repo,user`;
     return {
       statusCode: 302,
-      headers: { Location: "/admin/" },
+      headers: { Location: githubAuth },
     };
   }
 
@@ -28,30 +32,23 @@ exports.handler = async (event) => {
     );
     const data = await response.json();
 
-    if (data.error) throw new Error(data.error_description);
-
-    const content = `<!DOCTYPE html><html><head><script>
-      window.opener.postMessage(
-        ${JSON.stringify({
-          token: data.access_token,
-          provider: "github",
-        })},
-        window.location.origin
-      );
-      window.close();
-    </script></head><body><p>Logged in. Closing...</p></body></html>`;
+    if (data.error) {
+      return {
+        statusCode: 302,
+        headers: { Location: "/admin/?error=" + encodeURIComponent(data.error_description || data.error) },
+      };
+    }
 
     return {
-      statusCode: 200,
-      headers: { "Content-Type": "text/html" },
-      body: content,
+      statusCode: 302,
+      headers: {
+        Location: `/admin/#access_token=${data.access_token}&token_type=bearer&provider=github`,
+      },
     };
   } catch (err) {
     return {
       statusCode: 302,
-      headers: {
-        Location: `/admin/?error=${encodeURIComponent(err.message)}`,
-      },
+      headers: { Location: "/admin/?error=" + encodeURIComponent(err.message) },
     };
   }
 };
