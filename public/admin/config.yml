@@ -1,9 +1,6 @@
 backend:
-  name: github
-  repo: panpan951202/steel-pipe-website
+  name: git-gateway
   branch: master
-  base_url: https://radiant-phoenix-d4e6a6.netlify.app
-  auth_endpoint: /api/auth
 
 site_url: https://radiant-phoenix-d4e6a6.netlify.app
 
