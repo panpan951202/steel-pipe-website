@@ -11,7 +11,7 @@ export default function HeroSection() {
             Premium Steel Pipe Solutions for Global Infrastructure
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-gray-300 leading-relaxed">
-            SMLS, ERW, LSAW, SSAW, and HSAW steel pipes manufactured to international standards.
+            SMLS, ERW, LSAW, and SSAW steel pipes manufactured to international standards.
             Serving oil & gas, water, construction, and industrial sectors across 60+ countries.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">

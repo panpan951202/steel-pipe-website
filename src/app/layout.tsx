@@ -14,10 +14,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: {
     template: `%s | ${SITE_NAME}`,
-    default: `${COMPANY_NAME} - Steel Pipe Manufacturer | SMLS, ERW, LSAW, SSAW, HSAW`,
+    default: `${COMPANY_NAME} - Steel Pipe Manufacturer | SMLS, ERW, LSAW, SSAW, SSAW`,
   },
   description:
-    "Leading manufacturer and exporter of SMLS, ERW, LSAW, SSAW, and HSAW steel pipes. Serving oil & gas, water, construction, and industrial sectors across 60+ countries with international quality standards.",
+    "Leading manufacturer and exporter of SMLS, ERW, LSAW, and SSAW steel pipes. Serving oil & gas, water, construction, and industrial sectors across 60+ countries with international quality standards.",
   metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: "/",
@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: `${COMPANY_NAME} - Steel Pipe Manufacturer`,
     description:
-      "Premium steel pipe manufacturer specializing in SMLS, ERW, LSAW, SSAW, and HSAW pipes for global infrastructure projects.",
+      "Premium steel pipe manufacturer specializing in SMLS, ERW, LSAW, and SSAW pipes for global infrastructure projects.",
   },
   twitter: {
     card: "summary_large_image",
     title: `${COMPANY_NAME} - Steel Pipe Manufacturer`,
     description:
-      "Premium steel pipe manufacturer specializing in SMLS, ERW, LSAW, SSAW, and HSAW pipes.",
+      "Premium steel pipe manufacturer specializing in SMLS, ERW, LSAW, and SSAW pipes.",
   },
   robots: {
     index: true,

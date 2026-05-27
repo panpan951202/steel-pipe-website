@@ -6,9 +6,9 @@ import { getAllProducts } from "@/lib/products";
 import { SITE_NAME } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Steel Pipe Products - SMLS, ERW, LSAW, SSAW, HSAW",
+  title: "Steel Pipe Products - SMLS, ERW, LSAW, SSAW",
   description:
-    "Comprehensive range of steel pipes: Seamless (SMLS), ERW, LSAW, SSAW, and HSAW. Diameters from 1/8\" to 120\" for oil & gas, water, construction, and industrial applications.",
+    "Comprehensive range of steel pipes: Seamless (SMLS), ERW, LSAW, and SSAW. Diameters from 1/8\" to 120\" for oil & gas, water, construction, and industrial applications.",
   alternates: { canonical: "/products" },
 };
 

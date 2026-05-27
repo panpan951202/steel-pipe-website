@@ -8,7 +8,7 @@ import { SITE_NAME } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Industry News & Technical Articles - Steel Pipe Insights",
   description:
-    "Stay updated with the latest steel pipe industry news, technical guides, market trends, and insights. Expert articles on SMLS, ERW, LSAW, SSAW, and HSAW steel pipe technologies.",
+    "Stay updated with the latest steel pipe industry news, technical guides, market trends, and insights. Expert articles on SMLS, ERW, LSAW, and SSAW steel pipe technologies.",
   alternates: { canonical: "/news" },
 };
 

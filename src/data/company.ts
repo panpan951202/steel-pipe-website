@@ -1,14 +1,12 @@
 export const companyInfo = {
-  name: "SteelPipe Pro Industries Ltd.",
-  shortName: "SteelPipe Pro",
+  name: "Cangzhou Xinchenyuan Pipeline Co., Ltd.",
+  shortName: "XCY-PIPE",
   founded: 2005,
   employees: 500,
   annualOutput: "300,000 tons",
   exportCountries: 60,
   factoryArea: "200,000 sqm",
-  description: `SteelPipe Pro Industries Ltd. is a leading manufacturer and exporter of high-quality steel pipes, headquartered in Tianjin, China — one of the world's largest steel production hubs. Since our founding in 2005, we have grown to become a trusted supplier to clients across more than 60 countries worldwide.
-
-Our comprehensive product range includes five major pipe categories: Seamless (SMLS), ERW, LSAW, SSAW, and HSAW steel pipes. Equipped with state-of-the-art production lines including hot-rolling mills, JCOE/UOE forming systems, high-frequency ERW mills, and advanced spiral welding machines, we are capable of producing pipes ranging from 1/8 inch to 120 inches in diameter.`,
+  description: `Cangzhou Xinchenyuan Pipeline Co., Ltd. is a steel pipe manufacturer with over 20 years of production experience. Our product range includes seamless steel pipes, longitudinal welded steel pipes and spiral steel pipes, alongside supporting anti-corrosion processing services. Our products are exported to dozens of countries and widely used in water conservancy, petroleum, natural gas and other fields.`,
   mission: "To provide world-class steel pipe solutions that enable the safe and efficient transportation of energy, water, and materials globally, while maintaining the highest standards of quality, reliability, and customer service.",
   vision: "To be the preferred global partner for steel pipe solutions, recognized for product excellence, technical innovation, and sustainable manufacturing practices.",
   certifications: [

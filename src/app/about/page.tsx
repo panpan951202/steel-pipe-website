@@ -8,7 +8,7 @@ import { SITE_NAME } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "About Us - Leading Steel Pipe Manufacturer",
   description:
-    "SteelPipe Pro Industries - 20 years of expertise in manufacturing SMLS, ERW, LSAW, SSAW, and HSAW steel pipes. ISO 9001, API 5L certified. Annual capacity of 300,000 tons, exporting to 60+ countries.",
+    "SteelPipe Pro Industries - 20 years of expertise in manufacturing SMLS, ERW, LSAW, and SSAW steel pipes. ISO 9001, API 5L certified. Annual capacity of 300,000 tons, exporting to 60+ countries.",
   alternates: { canonical: "/about" },
 };
 
@@ -24,9 +24,9 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="py-16 bg-gray-50">
         <Container>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">About SteelPipe Pro</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">About Us</h1>
           <p className="text-lg text-gray-600 max-w-3xl">
-            {companyInfo.description.split('\n\n')[0]}
+            Cangzhou Xinchenyuan Pipeline Co., Ltd. is a steel pipe manufacturer with over 20 years of production experience. Our product range includes seamless steel pipes, longitudinal welded steel pipes and spiral steel pipes, alongside supporting anti-corrosion processing services. Our products are exported to dozens of countries and widely used in water conservancy, petroleum, natural gas and other fields.
           </p>
         </Container>
       </section>

@@ -18,7 +18,7 @@ The steel pipe industry is projected to grow at a CAGR of approximately 4.5% thr
 
 ## Key Growth Drivers
 
-1. **Energy Infrastructure Investment**: The global push for energy security has accelerated investment in oil and gas pipelines, LNG terminals, and petrochemical facilities. LSAW and HSAW pipes are particularly in demand for long-distance transmission lines.
+1. **Energy Infrastructure Investment**: The global push for energy security has accelerated investment in oil and gas pipelines, LNG terminals, and petrochemical facilities. LSAW and SSAW pipes are particularly in demand for long-distance transmission lines.
 
 2. **Water Infrastructure Projects**: Growing water scarcity concerns have driven massive investments in water transmission and distribution systems, where SSAW and ERW pipes play a crucial role.
 
@@ -34,7 +34,7 @@ Manufacturers are increasingly adopting automated production lines with AI-drive
 
 The steel pipe industry is embracing sustainability through increased use of recycled steel, energy-efficient manufacturing processes, and the development of green steel initiatives. Several major mills now operate electric arc furnaces (EAF) powered by renewable energy, significantly reducing the carbon footprint of steel pipe production.`,
     metaTitle: "Global Steel Pipe Market Trends 2025 - Industry Analysis",
-    metaDescription: "Comprehensive analysis of the global steel pipe market in 2025. Explore growth drivers, technological innovations, and sustainability trends shaping the SMLS, ERW, LSAW, SSAW, and HSAW pipe industries.",
+    metaDescription: "Comprehensive analysis of the global steel pipe market in 2025. Explore growth drivers, technological innovations, and sustainability trends shaping the SMLS, ERW, LSAW, and SSAW pipe industries.",
   },
   {
     slug: "lsaw-vs-ssaw-pipe-comparison",
@@ -229,7 +229,7 @@ Before selecting materials, engineers must evaluate:
 
 | Application | Recommended Pipe Type |
 |-------------|----------------------|
-| Onshore transmission (>16") | LSAW or HSAW |
+| Onshore transmission (>16") | LSAW or SSAW |
 | Onshore gathering (<16") | SMLS or ERW |
 | Offshore risers | SMLS |
 | Subsea flowlines | SMLS or LSAW |

@@ -11,7 +11,6 @@ const productOptions = [
   { label: "ERW Steel Pipe", value: "ERW" },
   { label: "LSAW Steel Pipe", value: "LSAW" },
   { label: "SSAW Steel Pipe", value: "SSAW" },
-  { label: "HSAW Steel Pipe", value: "HSAW" },
   { label: "Multiple Products / Other", value: "Other" },
 ];
 
