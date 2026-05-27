@@ -3,7 +3,7 @@ slug: ssaw-steel-pipe
 name: SSAW Steel Pipe
 shortName: SSAW
 tagline: Spiral submerged arc welded pipes for efficient large-diameter production
-image: /images/products/ssaw-pipe.png
+image: /images/products/ssaw-large.jpg
 category: Welded
 sizeRange: 8" - 120" (219mm - 3048mm)
 wallThickness: 5.0mm - 30mm

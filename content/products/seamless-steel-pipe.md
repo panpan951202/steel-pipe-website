@@ -3,7 +3,7 @@ slug: seamless-steel-pipe
 name: Seamless Steel Pipe
 shortName: SMLS
 tagline: High-pressure seamless steel pipes for critical applications
-image: /images/products/smls-pipe.png
+image: /images/products/ssaw-large.jpg
 category: Seamless
 sizeRange: 1/8" - 36" (10.3mm - 914.4mm)
 wallThickness: SCH 10 - SCH XXS (2.11mm - 60mm)
