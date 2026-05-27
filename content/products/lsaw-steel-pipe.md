@@ -3,7 +3,7 @@ slug: lsaw-steel-pipe
 name: LSAW Steel Pipe
 shortName: LSAW
 tagline: Longitudinal submerged arc welded pipes for large diameter transmission
-image: /images/products/ssaw-large.jpg
+image: /images/products/LSAW-larage.jpg
 category: Welded
 sizeRange: 16" - 56" (406mm - 1422mm)
 wallThickness: 6.0mm - 80mm
