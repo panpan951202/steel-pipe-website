@@ -42,7 +42,7 @@ const advantages = [
 export default function WhyChooseUs() {
   return (
     <Section
-      title="Why Choose SteelPipe Pro"
+      title="Why Choose XCY SteelPipe"
       subtitle="Decades of expertise delivering quality steel pipes to projects worldwide"
       className="bg-gray-50"
     >

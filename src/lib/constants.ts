@@ -8,7 +8,7 @@ export const CONTACT = {
   phone: "+86-15632796000",
   fax: "",
   email: "sales@xcypipe.com",
-  workingHours: "Mon - Fri: 8:00 AM - 6:00 PM (CST)",
+  workingHours: "24/7 Service",
 };
 
 export const SOCIAL = {
