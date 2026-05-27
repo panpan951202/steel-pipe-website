@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Breadcrumb from "@/components/layout/Breadcrumb";
@@ -64,14 +65,16 @@ export default async function ProductDetailPage(props: PageProps<"/products/[slu
       {/* Product Header */}
       <Container className="py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left - Image placeholder */}
-          <div className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-2xl flex items-center justify-center min-h-[400px]">
-            <div className="text-center">
-              <div className="w-32 h-32 mx-auto bg-blue-900 rounded-3xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-4xl">{product.shortName}</span>
-              </div>
-              <Badge className="mt-4">{product.category}</Badge>
-            </div>
+          {/* Left - Product Image */}
+          <div className="bg-gray-50 rounded-2xl flex items-center justify-center min-h-[400px] overflow-hidden">
+            <Image
+              src={product.image}
+              alt={product.name}
+              width={600}
+              height={450}
+              className="object-contain w-full h-full max-h-[500px]"
+              priority
+            />
           </div>
 
           {/* Right - Product info */}
