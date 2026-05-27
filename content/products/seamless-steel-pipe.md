@@ -1,4 +1,5 @@
 ---
+slug: seamless-steel-pipe
 name: Seamless Steel Pipe
 shortName: SMLS
 tagline: High-pressure seamless steel pipes for critical applications
