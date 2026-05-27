@@ -198,13 +198,21 @@ export default async function ProductDetailPage(props: PageProps<"/products/[slu
               <Link
                 key={rp.slug}
                 href={`/products/${rp.slug}`}
-                className="group bg-gray-50 border border-gray-200 rounded-xl p-6 hover:border-blue-200 hover:shadow-md transition-all"
+                className="group bg-gray-50 border border-gray-200 rounded-xl overflow-hidden hover:border-blue-200 hover:shadow-md transition-all"
               >
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3 group-hover:bg-blue-200 transition-colors">
-                  <span className="text-blue-900 font-bold text-xs">{rp.shortName}</span>
+                <div className="h-40 bg-gray-100 relative">
+                  <Image
+                    src={rp.image}
+                    alt={rp.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="33vw"
+                  />
                 </div>
-                <h3 className="font-bold text-gray-900 mb-1">{rp.name}</h3>
-                <p className="text-sm text-gray-600 line-clamp-2">{rp.tagline}</p>
+                <div className="p-5">
+                  <h3 className="font-bold text-gray-900 mb-1">{rp.name}</h3>
+                  <p className="text-sm text-gray-600 line-clamp-2">{rp.tagline}</p>
+                </div>
               </Link>
             ))}
           </div>
